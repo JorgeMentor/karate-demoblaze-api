@@ -1,0 +1,7 @@
+{
+  "request": { "username": "usuario_invent", "password": "clave_mala" },
+  "expectedError": [
+    "Wrong password.",
+    "User does not exist."
+  ]
+}

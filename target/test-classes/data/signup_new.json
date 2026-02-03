@@ -1,0 +1,4 @@
+{
+  "username": "signup_#(karate.uuid())",
+  "password": "Pass123*"
+}

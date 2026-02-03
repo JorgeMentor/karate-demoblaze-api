@@ -1,0 +1,5 @@
+{
+  "username": "demoblaze",
+  "password": "password_incorrecto",
+  "expectedError": "Wrong password."
+}
