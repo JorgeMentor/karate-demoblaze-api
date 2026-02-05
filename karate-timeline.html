@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"features\/_helpers\/ensure-user[1:3]","start":1770323870814,"end":1770323870954,"title":"features\/_helpers\/ensure-user[1:3] 20:37:50.814-20:37:50.954 Ensure user exists"},{"id":2,"group":1,"content":"features\/login[1.1:32]","start":1770323868370,"end":1770323869655,"title":"features\/login[1.1:32] 20:37:48.370-20:37:49.655 Login correcto desde CSV"},{"id":3,"group":1,"content":"features\/login[2:34]","start":1770323869670,"end":1770323869808,"title":"features\/login[2:34] 20:37:49.670-20:37:49.808 Login incorrecto desde JSON"},{"id":4,"group":1,"content":"features\/signup[1:11]","start":1770323870387,"end":1770323870569,"title":"features\/signup[1:11] 20:37:50.387-20:37:50.569 Crear nuevo usuario (signup) - username único"},{"id":5,"group":1,"content":"features\/signup[2.1:48]","start":1770323870578,"end":1770323870688,"title":"features\/signup[2.1:48] 20:37:50.578-20:37:50.688 Intentar crear usuario existente (signup) desde CSV"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
