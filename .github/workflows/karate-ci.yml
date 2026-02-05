@@ -3,7 +3,6 @@ name: Karate API Tests
 on:
   push:
     branches: [ "main" ]
-  pull_request:
 
 jobs:
   karate-test:
@@ -31,3 +30,11 @@ jobs:
           path: |
             **/target/karate-reports/**
             **/target/surefire-reports/**
+
+      # 🚀 PUBLICAR EN GITHUB PAGES
+      - name: Deploy Karate report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: target/karate-reports
