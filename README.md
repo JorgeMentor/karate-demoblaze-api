@@ -65,7 +65,7 @@ ESCENARIOS CUBIERTOS
 1. Crear un nuevo usuario en signup (username único generado dinámicamente)
 2. Intentar crear un usuario ya existente (desde CSV)
 3. Login con usuario y password correctos (desde CSV)
-4. Login con usuario o password incorrectos (desde JSON)
+4. Login con usuario o password incorrectos (desde JSON).
 
 --------------------------------------------------
 NOTAS IMPORTANTES
